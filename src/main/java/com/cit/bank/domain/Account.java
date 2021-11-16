@@ -20,15 +20,21 @@ public class Account {
         this.customer = customer;
     }
 
-    public void toDeposit(BigDecimal receivedValue) {
+    public BigDecimal getValue() {
+        return value;
+    }
 
+    public void toDeposit(BigDecimal receivedValue) {
+        this.value = value.add(receivedValue);
     }
 
     public void toWithdraw(BigDecimal withdrawValue) {
-
+        this.value = value.subtract(withdrawValue);
     }
 
     public Integer getIdentifier() {
         return identifier;
     }
+
+
 }
