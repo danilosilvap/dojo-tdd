@@ -14,6 +14,12 @@ public class Account {
         this.customer = customer;
     }
 
+    public Account(final Integer identifier, final Customer customer, BigDecimal value) {
+        this.identifier = identifier;
+        this.value = value;
+        this.customer = customer;
+    }
+
     public void toDeposit(BigDecimal receivedValue) {
 
     }
